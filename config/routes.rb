@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :watches
   # get 'home/index'
   root "articles#index"
