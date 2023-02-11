@@ -1,14 +1,13 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Watches</h1>
+<h1 class="px-4">Watches</h1>
 
-<div id="watches">
+<div class="row" id="watches">
   <% @watches.each do |watch| %>
     <%= render watch %>
-    <p>
-      <%= link_to "Show this watch", watch %>
-    </p>
   <% end %>
 </div>
 
-<%= link_to "New watch", new_watch_path %>
+<h3 class="p-4">
+  <%= link_to "New watch", new_watch_path %>
+</h3>
