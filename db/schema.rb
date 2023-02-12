@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_02_11_050307) do
+ActiveRecord::Schema[7.0].define(version: 2023_02_12_183447) do
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
@@ -54,14 +54,15 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_11_050307) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  create_table "watches", force: :cascade do |t|
+  create_table "watch_boxes", force: :cascade do |t|
     t.string "title"
+    t.string "branch"
+    t.string "model"
     t.string "description"
-    t.string "content"
-    t.integer "price"
+    t.string "price"
+    t.string "avata"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "gender"
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :watch_boxes
   get 'users/show'
   devise_for :users
   devise_scope :user do  
