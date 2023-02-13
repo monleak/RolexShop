@@ -10,6 +10,7 @@ git clone https://github.com/monleak/RolexShop.git
 cd RolexShop
 bundle install
 yarn install --check-files
+rake db:migrate
 rails s
 ```
 
