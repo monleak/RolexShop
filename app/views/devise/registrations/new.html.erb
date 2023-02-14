@@ -14,12 +14,13 @@
 
               <h2 class="fw-bold mb-2 text-uppercase">Sign up</h2>
               <p class="text-white-50 mb-5">Please enter your login and password!</p>
-
-              <div class="form-outline form-white mb-4">
-                <%= f.text_field :name , :class => "form-control form-control-lg", :placeholder => "Name"%>
-              </div>
-              <div class="form-outline form-white mb-4">
-                <%= f.number_field :age, :class => "form-control form-control-lg", :placeholder => "Age" %>
+              <div class="row">
+                <div class="form-outline form-white col-md-6 mb-4">
+                  <%= f.text_field :name , :class => "form-control form-control-lg", :placeholder => "Name"%>
+                </div>
+                <div class="form-outline form-white col-md-6 mb-4">
+                  <%= f.number_field :age, :class => "form-control form-control-lg", :placeholder => "Age" %>
+                </div>
               </div>
               <div class="form-outline form-white mb-4">
                 <%= f.email_field :email, autofocus: true, autocomplete: "email" , :class => "form-control form-control-lg", :placeholder => "Email"%>
