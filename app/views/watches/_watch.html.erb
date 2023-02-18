@@ -4,11 +4,11 @@
       <div class="w-100 col-md-8 col-lg-6 col-xl-5">
         <div class="card text-black">
           <i class="fab fa-apple fa-lg pt-3 pb-1 px-3"></i>
-          <% if @watch %> 
-            <% if @watch.image.attached? %>
-              <%= image_tag(@watch.image, style: 'width:180px;height:120px;') %>
+          <% if watch %> 
+            <% if watch.image.attached? %>
+              <%= image_tag(watch.image, style: 'width:full;') %>
               <% else %>
-              <%= image_tag('/rolex/donghonam.jpg', style: 'width:180px;height:120px;') %>
+              <%= image_tag('/rolex/donghonam.jpg', style: 'width:full;') %>
             <% end %>
           <% end %>
 
