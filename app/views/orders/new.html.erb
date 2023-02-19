@@ -1,0 +1,21 @@
+<%= form_with model: @order, url: orders_path do |form| %>
+  <div>
+    <%= form.label :user_id %>
+    <%= form.collection_select :user_id, User.all, :id, :email %>
+  </div>
+  <div>
+    <%= form.label :watch_id %>
+    <%= form.collection_select :watch_id, Watch.all, :id, :name %>
+  </div>
+  <div>
+    <%= form.label :watch_box_id %>
+    <%= form.collection_select :watch_box_id, WatchBox.all, :id, :title %>
+  </div>
+  <div>
+    <%= form.label :watch_strap_id %>
+    <%= form.collection_select :watch_strap_id, WatchStrap.all, :id, :color %>
+  </div>
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
