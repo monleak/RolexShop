@@ -1,4 +1,5 @@
 class WatchesController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_watch, only: %i[ show edit update destroy ]
 
   # GET /watches or /watches.json
@@ -69,6 +70,10 @@ class WatchesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def watch_params
-      params.require(:watch).permit(:title, :description, :content, :price, :gender)
+      params.require(:watch).permit(:title, :description, :content, :price, :gender, :image)
+    end
+    
+    def authenticate_user!
+      redirect_to new_user_session_path unless user_signed_in?
     end
 end
