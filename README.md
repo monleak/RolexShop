@@ -1,24 +1,24 @@
-# README
+# ROLEX SHOP
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a website that sells watches and related accessories of the rolex brand. The language used in the website is Japanese.
+<hr>
 
-Things you may want to cover:
+## Version
 
-* Ruby version
+```
+ruby 3.2.0 (2022-12-25 revision a528908271) [x86_64-linux]
+Rails 7.0.4.2
+```
 
-* System dependencies
+## How to use my code
 
-* Configuration
+```
+git clone https://github.com/monleak/RolexShop.git
+cd RolexShop
+bundle install
+yarn install --check-files
+rake db:migrate
+rails s
+```
 
-* Database creation
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...

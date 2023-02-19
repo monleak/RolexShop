@@ -41,7 +41,9 @@ button:hover, a:hover {
 </style>
 </head>
 <body>
-
+<%= link_to "ホーム", root_path , :class => "btn btn-success btn-lg"%>  <%= link_to "情報を変更", edit_user_registration_path , :class => "btn btn-info btn-lg"%>
+<br>
+<hr>
 <h2 style="text-align:center">User Profile</h2>
 
 <div class="card">
@@ -50,7 +52,7 @@ button:hover, a:hover {
       <%= image_tag current_user.avatar, style: 'width:100%'%>
   <% end %>
 
-  <h1><%= current_user.name %></h1>
+  <h1>[<%= current_user.role %>] <%= current_user.name %></h1>
   <p class="title"><%= current_user.age %>歳</p>
   <div style="margin: 24px 0;">
     <a href="#"><i class="fa fa-dribbble"></i></a> 
@@ -58,11 +60,7 @@ button:hover, a:hover {
     <a href="#"><i class="fa fa-linkedin"></i></a>  
     <a href="#"><i class="fa fa-facebook"></i></a> 
   </div>
-  <p><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></p>
+  <button type="button" class="btn btn-danger"><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></button>
 </div>
-<br>
-<hr>
-<br>
-<%= link_to "ホーム", root_path %>
 </body>
 </html>
